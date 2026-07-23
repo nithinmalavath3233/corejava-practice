@@ -7,7 +7,7 @@ public class Student {
 	String Course;
 	Student(){
 		this(1, "charan");
-		
+		s
 	}
 
 	public Student(int id, String StudentName) {
