@@ -1,20 +1,27 @@
 package com.javavcube.loops;
-
 import java.util.Scanner;
-
-public class Checkprime {
+public class Prime {
 
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
-		System.out.println("enter numberto check prime or not: ");
+		System.out.println("enter number ");
 		int n=sc.nextInt();
-		if(isprime(i)) {
+		
+			if(isPrime(n)) {
+			System.out.print(n+"  is prime a number") ;
 			
+		}
+			else {
+				System.out.print(n+"  is not  prime  number") ;
+			
+			}
+		
+	  
 	}
 	static boolean isPrime(int n) {
 		
 		boolean status=true;
-		if(n==0 || n==2) {
+		if(n==0 || n==1) {
 			return false;
 		}
 		for(int i=2;i<=n/2;i++) {
@@ -23,9 +30,6 @@ public class Checkprime {
 			}
 		}
 		return status;
-		
-	}
-		}
 		
 	}
 
