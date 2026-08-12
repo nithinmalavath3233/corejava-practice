@@ -7,7 +7,7 @@ public class PerfectNumberLoops {
 	 static void findfactors(int n) {
 	      
 	           
-	        System.out.print("factors of "+n+":");
+	        System.out.print("factors of "+n+ ":");
 	        int sum=0;;
 	        for (int i = 1; i <= n / 2; i++) {  
 	        	
