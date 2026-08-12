@@ -21,7 +21,7 @@ public class Prime {
 	static boolean isPrime(int n) {
 		
 		boolean status=true;
-		if(n==0 || n==1) {
+		if(n<=1) {
 			return false;
 		}
 		for(int i=2;i<=n/2;i++) {

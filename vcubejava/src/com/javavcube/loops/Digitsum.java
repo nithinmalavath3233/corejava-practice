@@ -7,7 +7,7 @@ public class Digitsum {
 		System.out.println("enter a number:");
 		int n=sc.nextInt();
 		int sum=digitsum(n);
-		System.out.println("digit sum of givrn number "+ sum);
+		System.out.println("digit sum of given number "+ sum);
 		
 
 	}
