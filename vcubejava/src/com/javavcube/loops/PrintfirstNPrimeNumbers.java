@@ -1,36 +1,40 @@
-
 package com.javavcube.loops;
 
 import java.util.Scanner;
 
-public class PrimeNumbers {
+public class PrintfirstNPrimeNumbers {
 
-     void main(String[] args) {
+    public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter a number:");
         int n = sc.nextInt();
 
-        System.out.println("Prime numbers from 1 to " + n + ":");
-          
-        for (int i = 1; i <= n; i++) {
+        int count = 0;
+        int i = 2;
+
+        while (count<n) {
+
             if (isPrime(i)) {
-                System.out.print(i+"  ");
+                 count++;                
+                System.out.print(i + "  ");
             }
+            i++;
+            
         }
 
         sc.close();
     }
 
-
-     boolean isPrime(int n) {
+    static boolean isPrime(int n) {
 
         if (n <= 1) {
             return false;
         }
 
-        for (int i = 2; i <= n/2 ; i++) {
+        for (int i = 2; i*i<= n; i++) {
+
             if (n % i == 0) {
                 return false;
             }
@@ -39,4 +43,3 @@ public class PrimeNumbers {
         return true;
     }
 }
-
