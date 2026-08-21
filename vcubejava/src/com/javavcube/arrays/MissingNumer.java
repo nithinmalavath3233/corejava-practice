@@ -6,7 +6,7 @@ public class MissingNumer {
 
 	public static void main(String[] args) {
 		int arr[]= {1,2,4,5,6};
-		System.out.println(Arrays.toString(arr));
+		System.out.println("original array:"+Arrays.toString(arr));
 		int sum=0;
 		int actualsum=0;
 		int n=arr.length;
