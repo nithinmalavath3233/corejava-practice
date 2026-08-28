@@ -5,6 +5,7 @@ public class Employee {
 	private int eid;
 	private String ename;
 	private Double salary;
+	private int password;
 	public void setEid(int eid) {
 		this.eid=eid;
 	}
@@ -26,6 +27,12 @@ public class Employee {
 	}
 	
 	
+	public void Password(int password) {
+		this.password=password;
+	}
+	public int getPassword() {
+		return password;
+	}
 	
 
 }
