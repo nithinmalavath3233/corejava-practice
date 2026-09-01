@@ -2,46 +2,35 @@ package com.oops;
 
 public class BankAccount {
 
-	private String holdername;
-	private String accountno;
-	private double balance;
-	
-		public void setHoldername(String holdername) {
-			this.holdername=holdername;
-			
-		}
-	
-		public String getHoldername() {
-			return holdername;
-		}
-		public void setAccountno(String accountno) {
-			this.accountno=accountno;
-			
+	   private long accountNumber;
+	    private String holderName;
+	    private double balance;
 
+	    // Constructor
+	    BankAccount(long accountNumber, String holderName) {
+	        this.accountNumber = accountNumber;
+	        this.holderName = holderName;
+	        this.balance = 5000;
+	    }
+
+	    // Deposit method
+	    public void deposit(double amount) {
+	        balance = balance + amount;
+	        System.out.println("Deposited: ₹" + amount);
+	    }
+
+	    // Withdraw method
+	    public void withdraw(double amount) {
+	        if (amount <= balance) {
+	            balance = balance - amount;
+	            System.out.println("Withdrawn: ₹" + amount);
+	        } else {
+	            System.out.println("Insufficient balance");
+	        }
+	    }
+
+	    // Getter for balance
+	    public double getBalance() {
+	        return balance;
+	    }
 	}
-		public String getaccountno() {
-			return accountno;
-		}
-		public void setBalance(double balance) {
-			this.balance=balance;
-			
-
-	}
-		public double getBalance() {
-			return balance;
-		}
-		double amount=balance;
-		 public double withdrawl(double withdraw)
-         if(withdraw<=amount) {
-        	 amount=amount-withdraw;
-         }
-         else {
-        	 System.out.println("insufficient balance");
-         }
-         return amount;
-         
-         }
-
-
-
-}
