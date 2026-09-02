@@ -1,44 +1,41 @@
 package com.oops;
 
 public class ShoppingCart {
-	private int cartitems;
-	private int totalAmount;
-	
-	public void setCartitems(int cartitems) {
-		this.cartitems=cartitems;
-	}
-	public int   getCartitems() {
-		return cartitems;
-		
-	}
-	public void setTotalAmount(int totalAmount) {
-		this.totalAmount=totalAmount;
-	}
-	public int   getTotalAmount() {
-		return totalAmount;
-		
-	}
-	public void additem(int item,int price) {
-		
-		cartitems=cartitems+item;
-		int p=item*price;
-		 totalAmount=totalAmount+p;
-	}
-public void removeitem(int items,int prices){
-		
-    
-		int p=items*prices;
-		if(p<=totalAmount && items<=cartitems) {
-			cartitems=cartitems-items;
-			 totalAmount=totalAmount-p;
-		}
-}
-		public void gettotal() {
-			
-			System.out.println("cartitems:"+cartitems);
-			System.out.println("totalamount:"+totalAmount);
-			
-		}
 
+    private int cartItems;
+    private int totalAmount;
 
+    public void setCartItems(int cartItems) {
+        this.cartItems = cartItems;
+    }
+
+    public int getCartItems() {
+        return cartItems;
+    }
+
+    public void setTotalAmount(int totalAmount) {
+        this.totalAmount = totalAmount;
+    }
+
+    public int getTotalAmount() {
+        return totalAmount;
+    }
+
+    public void addItem(int item, int price) {
+        cartItems = cartItems + item;
+        totalAmount = totalAmount + (item * price);
+    }
+
+    public void removeItem(int item, int price) {
+        int amount = item * price;
+
+        if (item <= cartItems && amount <= totalAmount) {
+            cartItems = cartItems - item;
+            totalAmount = totalAmount - amount;
+        }
+    }
+
+    public int getTotal() {
+        return totalAmount;
+    }
 }
