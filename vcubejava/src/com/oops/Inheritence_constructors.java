@@ -2,19 +2,30 @@ package com.oops;
 
 class Person {
 
-    public void name(String pname) {
-        System.out.println("Name: " + pname);
-    }
+    String name;
+    int age;
 
-    public void ages(int age) {
-        System.out.println("Age: " + age);
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
 }
 
 class Student extends Person {
 
-    public void CollegeNames(String cname) {
-        System.out.println("College: " + cname);
+    String collegeName;
+
+    Student(String name, int age, String collegeName) {
+
+        super(name, age);   // calls parent constructor
+
+        this.collegeName = collegeName;
+    }
+
+    void display() {
+        System.out.println(name);
+        System.out.println(age);
+        System.out.println(collegeName);
     }
 }
 
@@ -22,14 +33,8 @@ public class Inheritence_constructors {
 
     public static void main(String[] args) {
 
-       Person p1 =new Person();
+        Student s = new Student("Nithin", 22, "MREC");
 
-       p1.name("Nithin");
-       p1.ages(22);
-        Student s1 = new Student();
-
-        s1.name("Nithin");
-        s1.ages(22);
-        s1.CollegeNames("MREC");
+        s.display();
     }
 }
