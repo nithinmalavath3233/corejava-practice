@@ -12,8 +12,10 @@ public class findhighFreqele {
 		for(int i : freq.keySet()) {
 		    System.out.println(i + "-->" + freq.get(i));
 		}
-		int maxfreq=-1;
+		int maxfreq=Integer.MIN_VALUE;
 		int maxfreqkey=-1;
+		int minfreq=Integer.MAX_VALUE;
+		int minfreqkey=-1;
 		for(int Key:freq.keySet()) {
 			int currfreq = freq.get(Key);
 			int currfreqKey = Key;
@@ -22,13 +24,13 @@ public class findhighFreqele {
 				maxfreq=currfreq;
 				maxfreqkey=currfreqKey;
 			}
-			
+			if(currfreq<minfreq) {
+				minfreq=currfreq;
+				minfreqkey=currfreqKey;
 			}
-		System.out.println("max  "+maxfreqkey+"-->"+maxfreq);
+			}
+		System.out.println("max frequency elements   :"+  maxfreqkey+"   count -->"+maxfreq);
+		System.out.println("min  frequncy elements   :"+   minfreqkey+"    count -->"+minfreq);
 
 	}
-	
-
-	
-
 }
