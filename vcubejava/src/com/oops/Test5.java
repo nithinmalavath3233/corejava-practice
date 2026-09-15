@@ -17,5 +17,6 @@ class Test5 {
         show(10);
         show(10L);
         show(10.5);
+        //show();
     }
 }
