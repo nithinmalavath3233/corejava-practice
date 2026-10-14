@@ -24,7 +24,7 @@ public class DeSerialization {
 
             System.out.println(obj.username);
             System.out.println(obj.password);
-            System.out.println(obj.cvv);
+            System.out.println(obj.cvv    );
         }
 
         System.out.println("main method ended");
