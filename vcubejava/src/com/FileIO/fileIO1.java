@@ -2,7 +2,6 @@ package com.FileIO;
 import java.io.File;
 import java.io.IOException;
 
-
 public class fileIO1 {
 
 	public static void main(String[] args) {
@@ -19,8 +18,7 @@ public class fileIO1 {
 			else {
 				System.out.println("something went wrong ");
 			}
-			
-			
+				
 		}
 		   else{
 			System.out.println("with this  name file  already exists");   
@@ -30,10 +28,6 @@ public class fileIO1 {
 			System.out.println("in catch");
 			e.printStackTrace();
 		}
-		
-		
-		
-		
 		
 		System.out.println("main method ended");
 		

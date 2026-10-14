@@ -16,7 +16,8 @@ public class FIleIO7 {
 			System.out.println(s);
 			s=br.readLine();
 		}
-		
+		    br.close();
+		    fr.close();
 		
 		System.out.println("main method ended");
 		
